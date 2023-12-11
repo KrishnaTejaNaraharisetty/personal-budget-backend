@@ -9,7 +9,9 @@ const bodyParser = require("body-parser");
 const SignupSchema = require("./models/SignupModel");
 const BudgetSchema = require("./models/BudgetModel");
 const ExpenseSchema = require("./models/ExpenseModel");
-let url = "mongodb://127.0.0.1:27017/personal-budget";
+let url = "mongodb+srv://naraharikrishna007:mongo123@cluster0.gg0xlv9.mongodb.net/personal_budget";
+
+//MONGO_URL = mongodb+srv://naraharikrishna007:mongo123@cluster0.gg0xlv9.mongodb.net/personal_budget
 
 const bcrypt = require("bcrypt");
 const port = 3002;
@@ -190,3 +192,4 @@ app.post("/refresh-token/:userId",async(req,res)=>{
 app.listen(port, () => {
   console.log(`API served at http://localhost:${port}`);
 });
+
